@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %} 
+
+{%block title%} PROSTAGES - Accueil {%endblock%}
+
+{%block contenu%}
+<table class="table"> <!-- TABLEAU DES STAGES-->
+	<thead>
+		<tr>
+			<th scope="col"> Titre </th>
+			<th scope="col"> Description </th>
+			<th scope="col"> Formation </th>
+			<th scope="col"> Nom de l'entreprise </th>
+			<th scope="col"> Activité de l'entreprise</th>
+			<th scope="col"> Adresse de l'entreprise </th>
+			<th scope="col"> Email de l'entreprise </th>
+		</tr>
+	</thead>
+	<tbody>
+			{% for stage in 1..3%}
+			<tr>
+				{% for i in 1..7%}
+					<td> <a href="/stage{{stage}}">{{stage}} </a></td>
+				{% endfor%}
+			</tr>
+			{% endfor%}
+	</tbdody>
+</table>
+	
+{%endblock%}
+
+
+
